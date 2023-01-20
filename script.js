@@ -9,7 +9,7 @@ document.addEventListener('keydown', (event) => {
    }
 });
 
-const getValue = (HIP, sizeA, sizeB) => {
+const getValue = (HIP = 0.0, sizeA = 0.0, sizeB = 0.0) => {
    const URLWithValues = `http://localhost:5000/triangleSides/${HIP};${sizeA};${sizeB}`;
    axios.get(URLWithValues)
       .then(response => {
