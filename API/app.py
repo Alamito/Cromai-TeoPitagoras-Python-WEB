@@ -3,25 +3,22 @@ import math
 
 app = Flask(__name__)
 
-triangleSides = [
-    {
-        'name': 'HIP',
-        'value': ''
-    },
+# triangleSides = [
+#     {
+#         'name': 'HIP',
+#         'value': ''
+#     },
 
-    {
-        'name': 'CO',
-        'value': ''
-    },
+#     {
+#         'name': 'CO',
+#         'value': ''
+#     },
 
-    {
-        'name': 'CA',
-        'value': ''
-    }
-]
-
-# consult (every)
-
+#     {
+#         'name': 'CA',
+#         'value': ''
+#     }
+# ]
 
 @app.route('/triangleSides/<float:hip>;<float:sizeA>;<float:sizeB>', methods=['GET'])
 def getAll(hip, sizeA, sizeB):
