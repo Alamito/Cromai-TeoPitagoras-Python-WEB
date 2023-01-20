@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import math
 
 app = Flask(__name__)
 
@@ -20,21 +21,16 @@ triangleSides = [
 ]
 
 # consult (every)
-@app.route('/triangleSides', methods=['GET'])
-def getAll():
-    return jsonify(triangleSides)
 
-# edit
-@app.route('/triangleSides/<string:name>', methods=['PUT'])
-def editarValueByName(side):
-    valueChanged = request.get_json()
-    return changeValue(valueChanged, side)
 
-def changeValue(value, side):
-    for index, side in enumerate(triangleSides):
-        if side.get('side') == side:
-            triangleSides[index].update(value)
-            return jsonify(triangleSides[index])
+@app.route('/triangleSides/<float:hip>;<float:sizeA>;<float:sizeB>', methods=['GET'])
+def getAll(hip, sizeA, sizeB):
+    if (hip == 0):
+        return jsonify(sizeA*sizeA + sizeB*sizeB)
+    elif (sizeA == 0):
+        return jsonify(math.sqrt(sizeB*sizeB - (hip*hip)))
+    elif (sizeB == 0):
+        return jsonify(math.sqrt(sizeA*sizeA - (hip*hip)))
 
 # run API
 app.run(port = 5000, host = 'localhost', debug = True)
