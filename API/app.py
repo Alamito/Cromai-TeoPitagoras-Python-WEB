@@ -8,9 +8,9 @@ def getAll(hip, sizeA, sizeB):
     if (hip == 0):
         return {"size": "hip", "value": math.sqrt(sizeA*sizeA + sizeB*sizeB)}
     elif (sizeA == 0):
-        return {"size": "A", "value": math.sqrt(sizeB*sizeB - (hip*hip))}
+        return {"size": "A", "value": math.sqrt((hip*hip) - (sizeB*sizeB))}
     elif (sizeB == 0):
-        return {"size": "B", "value": math.sqrt(sizeA*sizeA - (hip*hip))}
+        return {"size": "B", "value": math.sqrt((hip*hip) - (sizeA*sizeA))}
 
 # run API
 app.run(port = 5000, host = 'localhost', debug = True)
