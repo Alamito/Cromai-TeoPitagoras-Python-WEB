@@ -3,27 +3,10 @@ import math
 
 app = Flask(__name__)
 
-# triangleSides = [
-#     {
-#         'name': 'HIP',
-#         'value': ''
-#     },
-
-#     {
-#         'name': 'CO',
-#         'value': ''
-#     },
-
-#     {
-#         'name': 'CA',
-#         'value': ''
-#     }
-# ]
-
 @app.route('/triangleSides/<float:hip>;<float:sizeA>;<float:sizeB>', methods=['GET'])
 def getAll(hip, sizeA, sizeB):
     if (hip == 0):
-        return {"size": "hip", "value": sizeA*sizeA + sizeB*sizeB}
+        return {"size": "hip", "value": math.sqrt(sizeA*sizeA + sizeB*sizeB)}
     elif (sizeA == 0):
         return {"size": "A", "value": math.sqrt(sizeB*sizeB - (hip*hip))}
     elif (sizeB == 0):

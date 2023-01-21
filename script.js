@@ -5,19 +5,32 @@ const button = document.querySelector('.buttonCalculate');
 
 document.addEventListener('click', (event) => {
    if (event.target === button) {
-      const valueHIP = checkValueAndAddCaractere(HIP.value);
-      // console.log(valueHIP)
-      const valueA = checkValueAndAddCaractere(sizeA.value);
-      const valueB = checkValueAndAddCaractere(sizeB.value);
-      getValue(valueHIP || "0.0", valueA || "0.0", valueB || "0.0")
+      const inputNotNull = countInput(HIP.value, sizeA.value, sizeB.value)
+      if (inputNotNull === 2) {
+         const valueHIP = transformInFloat(HIP.value);
+         const valueA = transformInFloat(sizeA.value);
+         const valueB = transformInFloat(sizeB.value);
+         getValue(valueHIP, valueA, valueB)
+      } else {
+         alert(`Insira valores em dois campos e deixe em branco aquele no qual deseja calcular o valor!`)
+      }
    }
 });
 
-const checkValueAndAddCaractere = (value) => {
-   if (!value) {
-      return null;
-   }
-   if (value.indexOf('.') === -1) {
+const countInput = (...valuesSizes) => {
+   let countInputNotNull = 0;
+   valuesSizes.forEach(value => {
+      if (value) {
+         countInputNotNull++;
+      }
+   });
+   return countInputNotNull;
+}
+
+const transformInFloat = (value) => {
+   if (value === "") {
+      return "0.0";
+   } else if (value.indexOf('.') === -1) {
       return value + '.0';
    } else {
       return value + '0';
@@ -32,19 +45,19 @@ const getValue = (HIP, sizeA, sizeB) => {
       })
       .then(data => {
          printValue(data.size, data.value);
-   })
+      })
+      .catch(err => console.error(err))
 }
 
 const printValue = (size, value) => {
    if (size === "hip") {
-      HIP.value = value;
+      HIP.value = value.toFixed(2);
    } else if (size === "A") {
-      sizeA.value = value;
+      sizeA.value = value.toFixed(2);
    } else {
-      sizeB.value = value;
+      sizeB.value = value.toFixed(2);
    }
 }
-
 
 function onlyNumber(evt) {
    var theEvent = evt || window.event;
