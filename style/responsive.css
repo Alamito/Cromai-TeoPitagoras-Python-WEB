@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px) {
+    #container {
+        height: 40%;
+        width: 60%;
+        flex-direction: column;
+    }
+
+    #container .boxInput {
+        flex-direction: row;
+        margin: auto;
+    }
+
+    img {
+        margin: auto;
+        height: auto;
+        width: 70%;
+    }
+
+    label, input, .buttonCalculate {
+        font-size: 15px;
+    }
+
+    .buttonCalculate {
+        margin-top: auto;
+    }
+}
+
+@media screen and (max-width: 673px) {
+    label, input, .buttonCalculate {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 488px) {
+    #container {
+        height: 40%;
+        width: 90%;
+    }
+}

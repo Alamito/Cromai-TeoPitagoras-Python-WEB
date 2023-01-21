@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style2.css">
+    <link rel="stylesheet" href="style/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Teorema de Pitagoras</title>
 </head>
 <body>
-    <img src="img/background.gif" alt="background">
+    <h1>Calculadora<br>Teorema de Pitagoras</h1>
     <div id="container">
-        <img src="img/triangle.png" alt="">
-        <input class = "HIP" type = "text" onkeypress="return onlyNumber();" value="">
-        <input class = "size-A" type = "text" onkeypress="return onlyNumber();" value="">
-        <input class = "size-B" type = "text" onkeypress="return onlyNumber();" value="">
-        <button class = "buttonCalculate">CALCULATE</button>
+        <img src="img/triangle3.png" alt="">
+        <div class="boxInput">
+            <div class = "input">
+                <label>Hipotenusa</label>
+                <input class = "HIP" type = "text" onkeypress="return onlyNumber();" value="">
+            </div>
+            <div class = "input">
+                <label>Cateto a</label>
+                <input class = "size-A" type = "text" onkeypress="return onlyNumber();" value="">
+            </div>
+            <div class = "input">
+                <label>Cateto b</label>
+                <input class = "size-B" type = "text" onkeypress="return onlyNumber();" value="">
+            </div>
+            <div class="input">
+                <button class = "buttonCalculate">CALCULAR</button>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script/script.js"></script>

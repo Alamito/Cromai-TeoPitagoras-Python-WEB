@@ -6,76 +6,94 @@
 }
 
 body {
-    width: 100vw;
+    display: flex;
     height: 100vh;
+    width: 100vw;
+    background-image:url('../img/background.gif');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
 }
 
-body img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 
+        -2px -2px 1px #000, 
+        -2px 2px 1px #000,                    
+        2px -2px 1px #000,                  
+        2px 1px 1px #000;
 }
 
 #container {
     display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-#container img {
     height: 60%;
-    width: auto;
-    top: 30px;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 3px solid #000;
 }
 
-#container .HIP {
-    position: absolute;
-    left: 760px;
-    top: 250px;
+#container .boxInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    width: 100%;
 }
 
-#container .size-A {
-    position: absolute;
-    top: 440px;
+#container .input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    align-items: center;
+    width: 100%;
 }
 
-#container .size-B {
-    position: absolute;
-    left: 380px;
-    top: 250px;
+label {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
 }
 
 input {
     font-size: 20px;
     text-align: center;
     border-radius: 7px;
-    border: 2px solid black;
+    border: 2px solid #000;
     outline: 0;
-    padding: 5px;
-    width: 4em;
+    padding: 2px;
+    width: 80%;
 }
 
-#container .buttonCalculate {
-    position: absolute;
-    z-index: 100;
-    height: 3rem;
-    width: 6.5em;
+img {
+    height: auto;
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ .buttonCalculate {
+    height: auto;
+    width: 80%;
     background: #fff;
     color: #000;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
-    top: 540px;
+    border-radius: 7px;
+    padding: 2px;
 }
 
-#container .buttonCalculate:hover {
-    background-color: rgb(250, 240, 103);
-    border-radius: 15%;
+ .buttonCalculate:hover {
+    background-color: rgb(168, 203, 250);
     transition: 0.2s ease-in;
 }
 
-#container .buttonCalculate:active {
-    background: rgb(248, 233, 19);
+ .buttonCalculate:active {
+    background: rgb(88, 158, 251);
     transition: 0.1s ease-in;
 }
