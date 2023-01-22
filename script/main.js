@@ -3,7 +3,7 @@ const sizeA = document.querySelector('.size-A');
 const sizeB = document.querySelector('.size-B');
 const button = document.querySelector('.buttonCalculate');
 
-axios.defaults.baseURL = 'http://localhost:5000'
+axios.defaults.baseURL = 'http://localhost:5000/'
 
 // Conta quantos lados do triangulo possuem valor
 const countInput = (...valuesSizes) => {
