@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import math
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/triangleSides/<float:hip>;<float:sizeA>;<float:sizeB>', methods=['GET'])
 def getAll(hip, sizeA, sizeB):
