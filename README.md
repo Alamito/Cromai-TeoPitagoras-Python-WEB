@@ -1,5 +1,4 @@
 # 🧮 Teorema de Pitagoras 🔺
-[![NPM](https://img.shields.io/github/license/Alamito/ConcertS.A.-TesterInterface-CSharp-Dotnet)](https://github.com/Alamito/ConcertS.A.-TesterInterface-CSharp-Dotnet/blob/main/LICENSE)
 
 # 📜 Sobre o projeto 📜
 <p align="justify">
