@@ -1,3 +1,4 @@
+// Permite apenas numeros e ponto
 function onlyNumber(evt) {
    let theEvent = evt || window.event;
    let key = theEvent.keyCode || theEvent.which;
