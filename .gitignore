@@ -1,4 +1,7 @@
 *.txt
+!requirements.txt
+
 LICENSE
+
 .gitignore
 .gitignore
