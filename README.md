@@ -1,4 +1,5 @@
 # 🧮 Teorema de Pitagoras 🔺
+[![NPM](https://img.shields.io/github/license/Alamito/Cromai-TeoPitagoras-Python-WEB)](https://github.com/Alamito/Cromai-TeoPitagoras-Python-WEB/blob/main/LICENSE)
 
 # 📜 Sobre o projeto 📜
 <p align="justify">
@@ -63,6 +64,9 @@ cd "Cromai-TeoPitagoras-Python-WEB"
 pip install -r requirements.txt
 
 # entrar no diretório da API
+cd API
+
+# inicializar a API
 python app.py
 
 # voltar para o diretório do programa
