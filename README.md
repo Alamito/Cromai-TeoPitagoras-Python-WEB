@@ -4,6 +4,11 @@
 # 📜 Sobre o projeto 📜
 <p align="justify">
 Projeto dedicado ao desafio prático proposto pela empresa Cromai em seu processo seletivo, no qual tem como objetivo o desenvolvimento de uma calculadora de relação entre os lados de um triângulo retângulo, conhecido popularmente como Teorema de Pitágoras.
+</p>
+
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Areaspitagoras01.svg/290px-Areaspitagoras01.svg.png" />
+</p>
 
 Para a resolução do projeto foram desenvolvidos dois sistemas: o Front-end e uma API junto com um endpoint.
 
