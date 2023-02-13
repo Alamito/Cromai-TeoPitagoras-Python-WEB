@@ -82,7 +82,7 @@ index.html
 ```
 <p align="center" a = "http://teo-pitagoras-frontend.herokuapp.com/">
 Além disso, o projeto foi hospedado nos servidores da Heroku e pode ser visualizado no seguinte link: <br/>
-http://teo-pitagoras-frontend.herokuapp.com
+<s>http://teo-pitagoras-frontend.herokuapp.com</s>
 </p>
 
 
